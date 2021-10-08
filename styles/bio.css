@@ -144,6 +144,11 @@ footer h2,
   height: 30px;
 }
 
+.footer__email {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 @media (min-width: 768px) {
   .gallery__img {
     width: 33%;

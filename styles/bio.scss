@@ -128,6 +128,11 @@ footer h2,
   height: 30px;
 }
 
+.footer__email {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 // media queries - move or use mixin or whatever
 
 @media (min-width: 768px) {

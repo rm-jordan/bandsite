@@ -133,6 +133,10 @@ footer h2,
   text-decoration: none;
 }
 
+.footer__logo__top {
+  display: none;
+}
+
 // media queries - move or use mixin or whatever
 
 @media (min-width: 768px) {
@@ -156,5 +160,9 @@ footer h2,
   }
   .bio__right {
     width: 45%;
+  }
+  .footer__logo__top {
+    display: block;
+    // may need another display property
   }
 }

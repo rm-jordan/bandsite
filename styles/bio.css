@@ -149,6 +149,10 @@ footer h2,
   text-decoration: none;
 }
 
+.footer__logo__top {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .gallery__img {
     width: 33%;
@@ -174,5 +178,9 @@ footer h2,
 
   .bio__right {
     width: 45%;
+  }
+
+  .footer__logo__top {
+    display: block;
   }
 }/*# sourceMappingURL=bio.css.map */

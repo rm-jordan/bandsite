@@ -130,8 +130,11 @@ li a {
   justify-content: flex-start;
   flex-direction: column;
 }
+.footer__header {
+  padding-left: 20px;
+}
 .footer__nav {
-  padding: 16px 0px;
+  padding: 16px 20px;
 }
 .footer__logo__top {
   display: none;

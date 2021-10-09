@@ -109,25 +109,23 @@ li a {
     padding-bottom: 16px;
   }
 }
-// these above styles will need to be adjusted
 
-// make this a global style
 .about,
 .gallery {
   padding: 0px 16px 0px 16px;
 }
-// make this a global style
 
-// SCSS for Footer
 .footer {
   background-color: #323232;
   color: #ffffff;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  // remember to add the icons later to the scss
+  &__header {
+    padding-left: 20px;
+  }
   &__nav {
-    padding: 16px 0px;
+    padding: 16px 20px;
   }
   &__logo__top {
     display: none;
@@ -192,6 +190,5 @@ li a {
   }
   .footer__logo__top {
     display: block;
-    // may need another display property
   }
 }

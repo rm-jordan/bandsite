@@ -66,22 +66,39 @@ li a {
   }
 }
 
-// refactored code is above
-.about__section--img {
-  width: 100%;
-  background-size: cover;
-  background-position: cover;
+.about {
+  &__img {
+    width: 100%;
+    background-size: cover;
+    background-position: cover;
+  }
+  &__para {
+    padding: 16px 0px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  &__container {
+  }
+  &__bio {
+    padding: 16px 0px;
+  }
 }
 
-.about__section__bio {
-  padding: 16px 0px;
-}
+// .about__section--img {
+//   width: 100%;
+//   background-size: cover;
+//   background-position: cover;
+// }
 
-.rename-para {
-  padding: 16px 0px;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
+// .about__section__bio {
+//   padding: 16px 0px;
+// }
+
+// .rename-para {
+//   padding: 16px 0px;
+//   font-weight: 600;
+//   letter-spacing: 1px;
+// }
 
 .gallery__img {
   width: 100%;

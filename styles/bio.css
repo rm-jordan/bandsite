@@ -82,20 +82,18 @@ li a {
   padding-left: 20px;
 }
 
-.about__section--img {
+.about__img {
   width: 100%;
   background-size: cover;
   background-position: cover;
 }
-
-.about__section__bio {
-  padding: 16px 0px;
-}
-
-.rename-para {
+.about__para {
   padding: 16px 0px;
   font-weight: 600;
   letter-spacing: 1px;
+}
+.about__bio {
+  padding: 16px 0px;
 }
 
 .gallery__img {

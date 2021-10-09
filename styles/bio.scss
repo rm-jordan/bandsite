@@ -4,7 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 1px solid green;
+  // border: 1px solid green;
   // font-size: 16px;
 }
 
@@ -25,22 +25,31 @@ h2 {
   align-items: center;
   width: 100vw;
   // justify-content: space-around;
-  height: 14vh;
+  height: 19vh;
   // above may not be required
   &__header {
     display: flex;
     width: 120px;
     margin: 0 auto;
+    padding-top: 18px;
   }
   &__list {
     display: flex;
     width: 100%;
     text-align: center;
+    padding: 0;
   }
   &__list__item {
+    width: 50%;
   }
   &__list__link {
+    // adjustments required
+    font-size: 0.8rem;
+    padding: 8px 48px;
   }
+}
+.nav__list__link--bio {
+  border-bottom: 3px solid #ffffff;
 }
 
 .nav__list li {
@@ -62,7 +71,7 @@ li a {
   width: 100%;
   background-size: cover;
   background-position: cover;
-  height: 36vh;
+  height: 49vh;
   position: relative;
   &__header {
     display: flex;

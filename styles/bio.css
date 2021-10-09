@@ -27,7 +27,6 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 1px solid green;
 }
 
 h2 {
@@ -44,18 +43,32 @@ h2 {
   color: #ffffff;
   align-items: center;
   width: 100vw;
-  height: 14vh;
+  height: 19vh;
 }
 .nav__header {
   display: flex;
   width: 120px;
   margin: 0 auto;
+  padding-top: 18px;
 }
 .nav__list {
   display: flex;
   width: 100%;
   text-align: center;
+  padding: 0;
 }
+.nav__list__item {
+  width: 50%;
+}
+.nav__list__link {
+  font-size: 0.8rem;
+  padding: 8px 48px;
+}
+
+.nav__list__link--bio {
+  border-bottom: 3px solid #ffffff;
+}
+
 .nav__list li {
   list-style-type: none;
   color: inherit;
@@ -73,7 +86,7 @@ li a {
   width: 100%;
   background-size: cover;
   background-position: cover;
-  height: 36vh;
+  height: 49vh;
   position: relative;
 }
 .hero__header {

@@ -102,41 +102,37 @@ footer {
 }
 // make this a global style
 
-footer {
+// SCSS for Footer
+.footer {
   background-color: #323232;
   color: #ffffff;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-}
-.footer-blurb {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.footer-blurb-box {
-  padding: 20px;
-}
-
-footer h2,
-.socials-box,
-.footer-blurb .copyright {
-  padding: 16px 0px;
-}
-
-.icon {
-  padding-right: 25px;
-  height: 30px;
-}
-
-.footer__email {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.footer__logo__top {
-  display: none;
+  // remember to add the icons later to the scss
+  &__nav {
+    padding: 16px 0px;
+    &__logo__top {
+      display: none;
+    }
+  }
+  &__section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 16px 0px; //may need to adjust
+  }
+  &__section__container {
+    padding: 20px;
+  }
+  &__email {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  &__copyright {
+    padding: 16px 0px;
+  }
 }
 
 // media queries - move or use mixin or whatever

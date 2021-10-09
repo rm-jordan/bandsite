@@ -103,8 +103,8 @@ li a {
   padding-bottom: 16px;
 }
 
-.about__section,
-.gallery__section,
+.about,
+.gallery,
 footer {
   padding: 0px 16px 0px 16px;
 }

@@ -84,34 +84,23 @@ li a {
   }
 }
 
-// .about__section--img {
-//   width: 100%;
-//   background-size: cover;
-//   background-position: cover;
-// }
-
-// .about__section__bio {
-//   padding: 16px 0px;
-// }
-
-// .rename-para {
-//   padding: 16px 0px;
-//   font-weight: 600;
-//   letter-spacing: 1px;
-// }
-
-.gallery__img {
-  width: 100%;
-  background-size: cover;
-  background-position: cover;
-  padding-bottom: 16px;
+.gallery {
+  &__img {
+    width: 100%;
+    background-size: cover;
+    background-position: cover;
+    padding-bottom: 16px;
+  }
 }
+// these above styles will need to be adjusted
 
-.about__section,
-.gallery__section,
+// make this a global style
+.about,
+.gallery,
 footer {
   padding: 0px 16px 0px 16px;
 }
+// make this a global style
 
 footer {
   background-color: #323232;
@@ -151,7 +140,8 @@ footer h2,
 }
 
 // media queries - move or use mixin or whatever
-
+//NOTE:
+// BELOW WILL NEED TO BE RENAMED
 @media (min-width: 768px) {
   .gallery__img {
     width: 33%;

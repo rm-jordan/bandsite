@@ -44,54 +44,29 @@ h2 {
   width: 50%;
 }
 
-// .top-nav {
-//   background-color: #323232;
-//   display: flex;
-//   flex-direction: column;
-//   color: #ffffff;
-//   align-items: center;
-//   width: 100vw;
-//   // justify-content: space-around;
-//   // height: 10vh;
-//   // above may not be required
-// }
-
-// .nav__header {
-//   display: flex;
-//   width: 120px;
-//   margin: 0 auto;
-// }
-
-// //  --------------------- //
-// .top__nav__list {
-//   display: flex;
-//   width: 100%;
-// }
-
-// the above  coincide and needs editing ---//
-
 li a {
   text-decoration: none;
   color: #ffffff;
 }
+// the above  coincide and needs editing ---//
 
-.hero__bgr {
+.hero {
   background-image: url(../Assets/Images/hero-bio.jpg);
   width: 100%;
   background-size: cover;
   background-position: cover;
   height: 36vh;
   position: relative;
+  &__header {
+    display: flex;
+    color: #ffffff;
+    position: absolute;
+    top: 75px;
+    padding-left: 20px;
+  }
 }
 
-.hero__header {
-  display: flex;
-  color: #ffffff;
-  position: absolute;
-  top: 75px;
-  padding-left: 20px;
-}
-
+// refactored code is above
 .about__section--img {
   width: 100%;
   background-size: cover;

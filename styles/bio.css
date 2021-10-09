@@ -119,8 +119,7 @@ li a {
 }
 
 .about,
-.gallery,
-footer {
+.gallery {
   padding: 0px 16px 0px 16px;
 }
 
@@ -161,7 +160,12 @@ footer {
   text-decoration: none;
 }
 .footer__copyright {
-  padding: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+.footer__copyright__para {
+  font-size: 11px;
+  padding-top: 20px;
 }
 
 @media (min-width: 768px) {

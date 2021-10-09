@@ -44,6 +44,7 @@ h2 {
   color: #ffffff;
   align-items: center;
   width: 100vw;
+  height: 14vh;
 }
 .nav__header {
   display: flex;
@@ -53,12 +54,14 @@ h2 {
 .nav__list {
   display: flex;
   width: 100%;
+  text-align: center;
 }
 
 .nav__list li {
   list-style-type: none;
   color: inherit;
   width: 50%;
+  padding-top: 20px;
 }
 
 li a {
@@ -119,8 +122,14 @@ footer {
 .footer__nav {
   padding: 16px 0px;
 }
-.footer__nav__logo__top {
+.footer__logo__top {
   display: none;
+}
+.footer__nav__link {
+  padding-right: 20px;
+}
+.footer__icon {
+  height: 30px;
 }
 .footer__section {
   display: flex;
@@ -132,12 +141,15 @@ footer {
 .footer__section__container {
   padding: 20px;
 }
+.footer__section__para {
+  padding: 20px 0px;
+}
 .footer__email {
   color: #ffffff;
   text-decoration: none;
 }
 .footer__copyright {
-  padding: 16px 0px;
+  padding: 20px;
 }
 
 @media (min-width: 768px) {

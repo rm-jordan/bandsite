@@ -170,6 +170,11 @@ li a {
   font-size: 11px;
   padding-top: 20px;
 }
+@media (min-width: 400px) {
+  .footer__copyright__para {
+    font-size: 16px;
+  }
+}
 
 @media (min-width: 768px) {
   .gallery__img {

@@ -160,6 +160,9 @@ li a {
   &__copyright__para {
     font-size: 11px;
     padding-top: 20px;
+    @include midsize-phone {
+      font-size: 16px;
+    }
   }
 }
 

@@ -47,11 +47,22 @@ h2 {
   width: 100vw;
   height: 20vh;
 }
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+    height: 15vh;
+  }
+}
 .nav__header {
   display: flex;
   max-width: 120px;
   margin: 0 auto;
   padding-top: 18px;
+}
+@media (min-width: 768px) {
+  .nav__header {
+    padding-left: 10px;
+  }
 }
 .nav__list {
   display: flex;
@@ -77,6 +88,11 @@ h2 {
   color: inherit;
   width: 50%;
   padding-top: 20px;
+}
+@media (min-width: 768px) {
+  .nav__list li {
+    width: 10%;
+  }
 }
 
 li a {
@@ -126,11 +142,23 @@ p {
   padding: 16px 0px;
 }
 
+@media (min-width: 768px) {
+  .gallery__img__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 .gallery__img {
   width: 100%;
   background-size: cover;
   background-position: cover;
   padding-bottom: 16px;
+}
+@media (min-width: 768px) {
+  .gallery__img {
+    width: 33%;
+    padding: 10px;
+  }
 }
 
 .about,

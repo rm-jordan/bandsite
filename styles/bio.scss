@@ -25,20 +25,28 @@ h2 {
   color: #ffffff;
   align-items: center;
   width: 100vw;
-  // justify-content: space-around;
   height: 20vh;
-  // above may not be required
+  @include tablet {
+    flex-direction: row;
+    height: 15vh;
+  }
   &__header {
     display: flex;
     max-width: 120px;
     margin: 0 auto;
     padding-top: 18px;
+    @include tablet {
+      padding-left: 10px;
+    }
   }
   &__list {
     display: flex;
     width: 100%;
     text-align: center;
     padding: 0;
+    // @include tablet {
+    //   width: 40%;
+    // }
   }
   &__list__item {
     width: 50%;
@@ -59,7 +67,9 @@ h2 {
   color: inherit;
   width: 50%;
   padding-top: 20px;
-  // need to change and add underline
+  @include tablet {
+    width: 10%;
+  }
 }
 
 li a {
@@ -74,6 +84,7 @@ li a {
   background-size: cover;
   background-position: cover;
   height: 49vh;
+
   position: relative;
   &__header {
     display: flex;
@@ -116,11 +127,21 @@ p {
 }
 
 .gallery {
+  &__img__container {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
   &__img {
     width: 100%;
     background-size: cover;
     background-position: cover;
     padding-bottom: 16px;
+    @include tablet {
+      width: 33%;
+      padding: 10px;
+    }
   }
 }
 

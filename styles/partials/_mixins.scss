@@ -1,5 +1,6 @@
 $midsize-phone: 400px;
 $wide-phone: 467px;
+$small-tablet: 550px;
 $tablet-width: 768px;
 $desktop-width: 1280px;
 
@@ -11,6 +12,12 @@ $desktop-width: 1280px;
 
 @mixin wide-phone {
   @media (min-width: $wide-phone) {
+    @content;
+  }
+}
+
+@mixin small-tablet {
+  @media (min-width: $small-tablet) {
     @content;
   }
 }

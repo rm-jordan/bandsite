@@ -153,18 +153,18 @@ p {
   padding: 16px 0px;
 }
 
-.bio__left,
-.bio__right {
-  width: 47%;
-}
 @media (min-width: 768px) {
   .bio__left,
 .bio__right {
+    width: 47%;
     font-size: 14px;
     line-height: 22px;
   }
 }
 
+.gallery {
+  background-color: #fafafa;
+}
 @media (min-width: 768px) {
   .gallery__img__container {
     display: flex;
@@ -191,6 +191,7 @@ p {
   justify-content: flex-start;
   flex-direction: column;
   font-size: 13px;
+  padding-top: 20px;
 }
 .footer h3 {
   padding-top: 20px;

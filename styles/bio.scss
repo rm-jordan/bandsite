@@ -5,7 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 1px solid green;
+  // border: 1px solid green;
   font-size: 16px;
 }
 
@@ -24,11 +24,11 @@ h2 {
   flex-direction: column;
   color: #ffffff;
   align-items: center;
-  width: 100vw;
-  height: 20vh;
+  width: 100%;
+  height: 5rem;
   @include tablet {
     flex-direction: row;
-    height: 15vh;
+    // height: 15vh;
   }
   &__header {
     display: flex;
@@ -58,7 +58,7 @@ h2 {
   }
 }
 .nav__list__link--bio {
-  padding-bottom: 12px;
+  padding-bottom: 0px;
   border-bottom: 3px solid #ffffff;
 }
 
@@ -83,8 +83,7 @@ li a {
   width: 100%;
   background-size: cover;
   background-position: cover;
-  height: 49vh;
-
+  height: 60vw;
   position: relative;
   &__header {
     display: flex;
@@ -100,6 +99,11 @@ p {
   font-size: 13px;
   line-height: 18px;
   letter-spacing: 0.1px;
+}
+
+.about,
+.gallery {
+  padding: 0px 16px 0px 16px;
 }
 
 .about {
@@ -134,11 +138,13 @@ p {
   }
 }
 
-.bio__left {
-  width: 45%;
-}
+.bio__left,
 .bio__right {
-  width: 45%;
+  width: 47%;
+  @include tablet {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 .gallery {
@@ -158,11 +164,6 @@ p {
       padding: 10px;
     }
   }
-}
-
-.about,
-.gallery {
-  padding: 0px 16px 0px 16px;
 }
 
 .footer {
@@ -193,10 +194,17 @@ p {
       display: flex;
     }
   }
+  &__logo__container {
+    position: absolute;
+    right: 0;
+  }
   &__logo__top {
     display: none;
     @include tablet {
       display: block;
+      padding-top: 20px;
+      padding-right: 20px;
+      // fix me in edit
     }
   }
   &__nav__link {

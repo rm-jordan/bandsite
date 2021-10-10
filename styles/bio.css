@@ -44,7 +44,7 @@ h2 {
   color: #ffffff;
   align-items: center;
   width: 100vw;
-  height: 19vh;
+  height: 20vh;
 }
 .nav__header {
   display: flex;
@@ -67,6 +67,7 @@ h2 {
 }
 
 .nav__list__link--bio {
+  padding-bottom: 12px;
   border-bottom: 3px solid #ffffff;
 }
 
@@ -99,11 +100,12 @@ li a {
   font-size: 24px;
 }
 
-.about p {
+p {
   font-size: 13px;
   line-height: 18px;
   letter-spacing: 0.1px;
 }
+
 .about__img {
   width: 100%;
   background-size: cover;
@@ -141,6 +143,7 @@ li a {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  font-size: 13px;
 }
 .footer__header {
   padding-left: 20px;
@@ -184,7 +187,7 @@ li a {
 }
 @media (min-width: 400px) {
   .footer__copyright__para {
-    font-size: 16px;
+    font-size: 13px;
   }
 }
 

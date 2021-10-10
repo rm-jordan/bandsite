@@ -27,6 +27,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-size: 16px;
 }
 
 h2 {
@@ -47,7 +48,7 @@ h2 {
 }
 .nav__header {
   display: flex;
-  width: 120px;
+  max-width: 120px;
   margin: 0 auto;
   padding-top: 18px;
 }
@@ -61,7 +62,7 @@ h2 {
   width: 50%;
 }
 .nav__list__link {
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding: 8px 48px;
 }
 
@@ -95,8 +96,14 @@ li a {
   position: absolute;
   top: 75px;
   padding-left: 20px;
+  font-size: 24px;
 }
 
+.about p {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.1px;
+}
 .about__img {
   width: 100%;
   background-size: cover;
@@ -106,6 +113,11 @@ li a {
   padding: 16px 0px;
   font-weight: 600;
   letter-spacing: 1px;
+  font-size: 13px;
+  line-height: 18px;
+}
+.about__header {
+  font-weight: 400;
 }
 .about__bio {
   padding: 16px 0px;

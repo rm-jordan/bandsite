@@ -128,6 +128,14 @@ p {
   background-size: cover;
   background-position: cover;
 }
+@media (min-width: 768px) {
+  .about__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
 .about__para {
   padding: 16px 0px;
   font-weight: 600;
@@ -140,6 +148,14 @@ p {
 }
 .about__bio {
   padding: 16px 0px;
+}
+
+.bio__left {
+  width: 45%;
+}
+
+.bio__right {
+  width: 45%;
 }
 
 @media (min-width: 768px) {

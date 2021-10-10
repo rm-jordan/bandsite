@@ -108,6 +108,14 @@ p {
     background-size: cover;
     background-position: cover;
   }
+  &__container {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
   &__para {
     padding: 16px 0px;
     font-weight: 600;
@@ -124,6 +132,13 @@ p {
   &__bio {
     padding: 16px 0px;
   }
+}
+
+.bio__left {
+  width: 45%;
+}
+.bio__right {
+  width: 45%;
 }
 
 .gallery {
@@ -211,33 +226,3 @@ p {
     }
   }
 }
-
-// media queries - move or use mixin or whatever
-//NOTE:
-// BELOW WILL NEED TO BE RENAMED
-// @media (min-width: 768px) {
-//   .gallery__img {
-//     width: 33%;
-//     padding: 10px;
-//   }
-//   .gallery__img--box {
-//     display: flex;
-//     flex-wrap: wrap;
-//     padding-bottom: 10px;
-//   }
-//   .about__section__box {
-//     display: flex;
-//     flex-direction: row;
-//     flex-wrap: wrap;
-//     justify-content: space-between;
-//   }
-//   .bio__left {
-//     width: 45%;
-//   }
-//   .bio__right {
-//     width: 45%;
-//   }
-//   .footer__logo__top {
-//     display: block;
-//   }
-// }

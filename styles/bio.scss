@@ -5,7 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  // border: 1px solid green;
+  border: 1px solid green;
   font-size: 16px;
 }
 
@@ -136,8 +136,15 @@ p {
   justify-content: flex-start;
   flex-direction: column;
   font-size: 13px;
+  h3 {
+    padding-top: 20px;
+  }
+  a {
+    font-size: 13px;
+  }
   &__header {
     padding-left: 20px;
+    padding-bottom: 0px;
   }
   &__nav {
     padding: 16px 20px;
@@ -157,12 +164,15 @@ p {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 16px 0px;
+    @include wide-phone {
+      flex-direction: column;
+    }
   }
   &__section__container {
-    padding: 20px;
+    padding: 0px 20px;
   }
   &__section__para {
-    padding: 20px 0px;
+    padding: 16px 0px;
   }
   &__email {
     color: #ffffff;
@@ -184,29 +194,29 @@ p {
 // media queries - move or use mixin or whatever
 //NOTE:
 // BELOW WILL NEED TO BE RENAMED
-@media (min-width: 768px) {
-  .gallery__img {
-    width: 33%;
-    padding: 10px;
-  }
-  .gallery__img--box {
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 10px;
-  }
-  .about__section__box {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .bio__left {
-    width: 45%;
-  }
-  .bio__right {
-    width: 45%;
-  }
-  .footer__logo__top {
-    display: block;
-  }
-}
+// @media (min-width: 768px) {
+//   .gallery__img {
+//     width: 33%;
+//     padding: 10px;
+//   }
+//   .gallery__img--box {
+//     display: flex;
+//     flex-wrap: wrap;
+//     padding-bottom: 10px;
+//   }
+//   .about__section__box {
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//   }
+//   .bio__left {
+//     width: 45%;
+//   }
+//   .bio__right {
+//     width: 45%;
+//   }
+//   .footer__logo__top {
+//     display: block;
+//   }
+// }

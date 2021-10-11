@@ -2,7 +2,7 @@ $midsize-phone: 400px;
 $wide-phone: 467px;
 $small-tablet: 550px;
 $tablet-width: 768px;
-$desktop-width: 1280px;
+$desktop-width: 1200px;
 
 @mixin midsize-phone {
   @media (min-width: $midsize-phone) {
@@ -29,7 +29,7 @@ $desktop-width: 1280px;
 }
 
 @mixin desktop {
-  @media (min-width: 1280px) {
+  @media (min-width: 1200px) {
     @content;
   }
 }

@@ -22,11 +22,11 @@ body {
 
 h2 {
   padding: 20px 0px;
-  font-size: 24px;
-  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 1.375rem;
   font-weight: 600;
   @include tablet {
-    font-size: 36px;
+    font-size: 2.25rem;
     padding-top: 24px;
     padding-bottom: 16px;
   }
@@ -106,20 +106,20 @@ li a {
     position: absolute;
     top: 48%;
     padding-left: 20px;
-    font-size: 24px;
+    font-size: 1.5rem;
     @include small-tablet {
-      font-size: 36px;
+      font-size: 2.25rem;
     }
     @include tablet {
-      font-size: 60px;
+      font-size: 3.75rem;
       padding-left: 40px;
     }
   }
 }
 
 p {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
   letter-spacing: 0.1px;
 }
 
@@ -148,9 +148,9 @@ p {
   &__para {
     padding: 16px 0px;
     font-weight: 600;
-    letter-spacing: 1px;
-    font-size: 13px;
-    line-height: 18px;
+    letter-spacing: 0.062rem;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
     @include tablet {
       padding-bottom: 32px;
     }
@@ -182,8 +182,8 @@ p {
 .bio__right {
   @include tablet {
     width: 45%;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -216,7 +216,7 @@ p {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  font-size: 13px;
+  font-size: 0.8125rem;
   padding-top: 20px;
   @include desktop {
     padding-left: 64px;
@@ -258,7 +258,7 @@ p {
     padding-right: 20px;
   }
   &__icon {
-    height: 30px;
+    height: 1.875rem;
   }
   &__section {
     display: flex;
@@ -296,10 +296,10 @@ p {
     }
   }
   &__copyright__para {
-    font-size: 11px;
+    font-size: 0.6875rem;
     padding-top: 20px;
     @include midsize-phone {
-      font-size: 13px;
+      font-size: 0.8125rem;
     }
   }
 }

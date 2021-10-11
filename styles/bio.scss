@@ -5,7 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  // border: 1px solid green;
+  border: 1px solid green;
   font-size: 16px;
 }
 
@@ -25,10 +25,9 @@ h2 {
   color: #ffffff;
   align-items: center;
   width: 100%;
-  height: 5rem;
+  height: 6rem;
   @include tablet {
     flex-direction: row;
-    // height: 15vh;
   }
   &__header {
     display: flex;
@@ -36,7 +35,8 @@ h2 {
     margin: 0 auto;
     padding-top: 18px;
     @include tablet {
-      padding-left: 10px;
+      padding-left: 80px;
+      margin-right: 100px;
     }
   }
   &__list {
@@ -44,22 +44,24 @@ h2 {
     width: 100%;
     text-align: center;
     padding: 0;
-    // @include tablet {
-    //   width: 40%;
-    // }
   }
   &__list__item {
     width: 50%;
   }
   &__list__link {
-    // adjustments required
     font-size: 1rem;
-    padding: 8px 48px;
+    padding: 10px 80px;
+    @include tablet {
+      padding: 10px 20px;
+    }
   }
 }
 .nav__list__link--bio {
-  padding-bottom: 0px;
+  padding-bottom: 15px;
   border-bottom: 3px solid #ffffff;
+  @include tablet {
+    padding-bottom: 24px;
+  }
 }
 
 .nav__list li {
@@ -89,7 +91,7 @@ li a {
     display: flex;
     color: #ffffff;
     position: absolute;
-    top: 75px;
+    top: 48%;
     padding-left: 20px;
     font-size: 24px;
   }
@@ -128,11 +130,8 @@ p {
     line-height: 18px;
   }
   &__header {
-    font-weight: 400;
-    //fix me
+    font-weight: 700;
   }
-  // &__container {
-  // }
   &__bio {
     padding: 16px 0px;
   }

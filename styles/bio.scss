@@ -38,7 +38,7 @@ h2 {
     margin: 0 auto;
     padding-top: 18px;
     @include tablet {
-      padding-left: 80px;
+      padding-left: 40px;
       margin-right: 100px;
     }
   }
@@ -56,17 +56,18 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 80px;
+    padding: 10px 40px;
     // @include tablet {
     //   padding: 10px 20px;
     // }
   }
 }
 .nav__list__link--bio {
-  padding-bottom: 15px;
+  padding-bottom: 6px;
   border-bottom: 3px solid #ffffff;
   @include tablet {
     padding-bottom: 24px;
+    margin-bottom: -24px;
   }
 }
 

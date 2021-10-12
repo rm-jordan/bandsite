@@ -1,1 +1,23 @@
-// shows.scss
+.hero {
+  background-image: url(../Assets/Images/hero-bio.jpg);
+  width: 100%;
+  background-size: cover;
+  background-position: cover;
+  height: 60vw;
+  position: relative;
+  &__header {
+    display: flex;
+    color: #ffffff;
+    position: absolute;
+    top: 48%;
+    padding-left: 20px;
+    font-size: 24px;
+    @include small-tablet {
+      font-size: 36px;
+    }
+    @include tablet {
+      font-size: 60px;
+      padding-left: 40px;
+    }
+  }
+}

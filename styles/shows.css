@@ -1,2 +1,57 @@
+body {
+  font-family: "AvenirNext LT Pro";
+}
 
-/*# sourceMappingURL=shows.css.map *//*# sourceMappingURL=shows.css.map */
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../Assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../Assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../Assets/Font/AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+.shows__hero {
+  background-image: url("../Assets/Images/hero-shows.jpg");
+  width: 100%;
+  background-size: cover;
+  background-position: cover;
+  height: 60vw;
+  position: relative;
+}
+.shows__hero__hero__header {
+  display: flex;
+  color: #ffffff;
+  position: absolute;
+  top: 48%;
+  padding-left: 20px;
+  font-size: 24px;
+}
+.shows__hero__hero__header__soundcloud {
+  position: absolute;
+  top: 60%;
+  width: 80%;
+}
+@media (min-width: 550px) {
+  .shows__hero__hero__header {
+    font-size: 36px;
+  }
+}
+@media (min-width: 768px) {
+  .shows__hero__hero__header {
+    font-size: 60px;
+    padding-left: 40px;
+  }
+}/*# sourceMappingURL=shows.css.map */

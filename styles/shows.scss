@@ -1,17 +1,25 @@
-.hero {
-  background-image: url(../Assets/Images/hero-bio.jpg);
+@use "./partials/typography" as *;
+@use "./partials/mixins" as *;
+
+.shows__hero {
+  background-image: url("../Assets/Images/hero-shows.jpg");
   width: 100%;
   background-size: cover;
   background-position: cover;
   height: 60vw;
   position: relative;
-  &__header {
+  &__hero__header {
     display: flex;
     color: #ffffff;
     position: absolute;
     top: 48%;
     padding-left: 20px;
     font-size: 24px;
+    &__soundcloud {
+      position: absolute;
+      top: 60%;
+      width: 80%;
+    }
     @include small-tablet {
       font-size: 36px;
     }

@@ -17,3 +17,31 @@ let commentList = [
 ]
 
 
+//lets grab the parent element
+let parent = document.querySelector('.comments')
+
+//create the child element
+
+let header = document.createElement('h2')
+header.classList.add('comments__header')
+
+//put the child inside by calling .appendChild
+
+parent.appendChild(header);
+
+// console.log(header)
+
+// so this above works,just need to add something to the header
+
+let testComment = document.querySelector('.comments__header');
+testComment.innerText = "Join the Conversation";
+
+
+//so do I have to do this every single element within the comments box? // can I create certain parts in HTML and then appendChild to them?
+
+// say create the header I did above and a container in HTML, then add the bits inside using JS?, is the form created in JS? 
+
+
+// so what we would do is use a loop to add to this comments section by appending to the html above?
+
+// 

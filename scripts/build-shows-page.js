@@ -51,3 +51,6 @@ const concertList = [
 
 console.log(concertList);
 //  set show array above, this is all I know what to do for now//
+
+
+// need to add things using the above array, not quite sure how it can be done. literally add the section to the html using JS? insert it after the hero?

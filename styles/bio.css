@@ -281,6 +281,15 @@ p {
   border-radius: 5px;
 }
 
+.test-box-center {
+  display: flex;
+}
+
+.another-box {
+  display: flex;
+  justify-content: space-between;
+}
+
 .footer {
   background-color: #323232;
   color: #ffffff;

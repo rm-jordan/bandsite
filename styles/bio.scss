@@ -238,10 +238,13 @@ p {
   border-radius: 5px;
 }
 
-.comment__box {
+.test-box-center {
+  display: flex;
 }
 
-.pic-box-test {
+.another-box {
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer {

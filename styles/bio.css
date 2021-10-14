@@ -281,11 +281,10 @@ p {
   border-radius: 5px;
 }
 
-.test-box-center {
+.comment__container {
   display: flex;
 }
-
-.another-box {
+.comment .comment__profile__header {
   display: flex;
   justify-content: space-between;
 }

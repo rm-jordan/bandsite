@@ -201,6 +201,7 @@ p {
 }
 
 // rough styling for form //lots to fix/adjust
+///need to rename and do scss, do not name comment, maybe use form section, form__header etc. etc.
 .comment {
   padding: 16px;
 }
@@ -238,13 +239,16 @@ p {
   border-radius: 5px;
 }
 
-.test-box-center {
-  display: flex;
-}
-
-.another-box {
-  display: flex;
-  justify-content: space-between;
+// THIS IS THE JS PART!!!!!!!!!!/////////
+// this is the CSS for the JS comment section
+.comment {
+  &__container {
+    display: flex;
+  }
+  .comment__profile__header {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .footer {

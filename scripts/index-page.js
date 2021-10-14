@@ -18,23 +18,23 @@ let commentList = [
 
 
 //lets grab the parent element
-let parent = document.querySelector('.comments')
+// let parent = document.querySelector('.comments')
 
 //create the child element
 
-let header = document.createElement('h2')
-header.classList.add('comments__header')
+// let header = document.createElement('h2')
+// header.classList.add('comments__header')
 
 //put the child inside by calling .appendChild
 
-parent.appendChild(header);
+// parent.appendChild(header);
 
 // console.log(header)
 
 // so this above works,just need to add something to the header
 
-let testComment = document.querySelector('.comments__header');
-testComment.innerText = "Join the Conversation";
+// let testComment = document.querySelector('.comments__header');
+// testComment.innerText = "Join the Conversation";
 
 
 //so do I have to do this every single element within the comments box? // can I create certain parts in HTML and then appendChild to them?

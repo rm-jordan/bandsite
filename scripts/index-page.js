@@ -16,11 +16,11 @@ let commentList = [
   }
 ]
 
-// console.table(commentList);  // <--works
+
 
 
 // lets grab the parent element
-let parentComment = document.querySelector('.comment__section');
+let parentComment = document.querySelector('.comment__section'); 
 
 
 function commentsArray() {
@@ -52,8 +52,7 @@ function commentsArray() {
     const profileHeader = document.createElement('div');
     profileHeader.classList.add('comment__profile__header');
 
-    // THESE NEED TO BE INSIDE THE COMMENT DIVS
-    // - ask for some help, perhaps an easier fix //
+  
 
     // create the h4 - user - array
     const userName = document.createElement('h4')
@@ -74,12 +73,12 @@ function commentsArray() {
     // - ask for some help, perhaps an easier fix //
 
     //remember this order does matter
-    commentArticle.appendChild(commentImg);
-    commentArticle.appendChild(commentContainer);
-    commentArticle.appendChild(profileHeader);
-    commentArticle.appendChild(userName);
-    commentArticle.appendChild(userDate);
-    commentArticle.appendChild(userComments);
+    commentArticle.appendChild(commentImg); // <-- check
+    commentArticle.appendChild(commentContainer); //<--check
+    commentContainer.appendChild(profileHeader); // <--check
+    profileHeader.appendChild(userName); // <-- check
+    userName.appendChild(userDate); // <--check
+    userDate.appendChild(userComments);
 
     //need to ask questions about the code, mostly working but for some reason does not line up properly, is there a way to close a div in JS or do I have to redo my code?
 
@@ -91,3 +90,7 @@ function commentsArray() {
 }
 
 commentsArray();
+
+
+// apparently we have a new comment to add to the top of the box  -- shit
+

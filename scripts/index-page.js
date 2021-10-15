@@ -48,22 +48,34 @@ function commentsArray() {
     commentContainer.classList.add('comment__profile__container');
     // console.log(commentContainer); <--works
 
-
     // create the div - comment__profile__header
-
+    const profileHeader = document.createElement('div');
+    profileHeader.classList.add('comment__profile__header');
 
     // create the h4 - user - array
-
+    const userName = document.createElement('h4')
+    // console.log('h4') <--works
+    userName.innerText = commentList[i].user;
+    // console.log(userName); <-- works
 
     // create the p - date - array
+    const userDate = document.createElement('p')
+    userDate.innerText = commentList[i].date;
 
 
     // create the p - enclosed in profile header - array comments
+    const userComments = document.createElement('p');
+    userComments.innerText = commentList[i].comments;
 
     //remember this order does matter
     commentArticle.appendChild(commentImg);
     commentArticle.appendChild(commentContainer);
+    commentArticle.appendChild(profileHeader);
+    commentArticle.appendChild(userName);
+    commentArticle.appendChild(userDate);
+    commentArticle.appendChild(userComments);
 
+    //need to ask questions about the code, mostly working but for some reason does not line up properly
 
     // glue everything together <---
     parentComment.appendChild(commentArticle);

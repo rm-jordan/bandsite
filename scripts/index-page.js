@@ -16,32 +16,60 @@ let commentList = [
   }
 ]
 
-
-//lets grab the parent element
-// let parent = document.querySelector('.comments')
-
-//create the child element
-
-// let header = document.createElement('h2')
-// header.classList.add('comments__header')
-
-//put the child inside by calling .appendChild
-
-// parent.appendChild(header);
-
-// console.log(header)
-
-// so this above works,just need to add something to the header
-
-// let testComment = document.querySelector('.comments__header');
-// testComment.innerText = "Join the Conversation";
+// console.table(commentList);  // <--works
 
 
-//so do I have to do this every single element within the comments box? // can I create certain parts in HTML and then appendChild to them?
+// lets grab the parent element
+let parentComment = document.querySelector('.comment__section');
+// console.log(parent);  <---works
 
-// say create the header I did above and a container in HTML, then add the bits inside using JS?, is the form created in JS? 
+function commentsArray() {
+  for(let i = 0; i < commentList.length; i++){
+    //create article
+    // console.log(commentList[i]); //iterate through the list
+    //above iteration is working
+
+    //now create the article element
+    const commentArticle = document.createElement('article');
+    // console.log(commentArticle); // <---works
+    commentArticle.classList.add('comment__container');
+    // console.log(commentArticle); <---works
+
+    //img element
+    const commentImg = document.createElement('img');
+    // console.log(commentImg); <---works
+    commentImg.classList.add('comment__img');
+    // console.log(commentImg); <--works
+    commentImg.setAttribute('src', '../Assets/Images/default.png');
+
+    // create the div - comment__profile__container
+    const commentContainer = document.createElement('div')
+    // console.log(commentContainer);  <--works
+    commentContainer.classList.add('comment__profile__container');
+    // console.log(commentContainer); <--works
 
 
-// so what we would do is use a loop to add to this comments section by appending to the html above?
+    // create the div - comment__profile__header
 
-// 
+
+    // create the h4 - user - array
+
+
+    // create the p - date - array
+
+
+    // create the p - enclosed in profile header - array comments
+
+    //remember this order does matter
+    commentArticle.appendChild(commentImg);
+    commentArticle.appendChild(commentContainer);
+
+
+    // glue everything together <---
+    parentComment.appendChild(commentArticle);
+
+  }
+
+}
+
+commentsArray();

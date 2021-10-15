@@ -42,7 +42,7 @@ body {
 .shows__hero__hero__header__soundcloud {
   position: absolute;
   top: 60%;
-  width: 80%;
+  width: 35%;
 }
 @media (min-width: 550px) {
   .shows__hero__hero__header {
@@ -53,5 +53,12 @@ body {
   .shows__hero__hero__header {
     font-size: 60px;
     padding-left: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .shows__box {
+    display: flex;
+    flex-direction: column;
   }
 }/*# sourceMappingURL=shows.css.map */

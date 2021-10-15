@@ -52,6 +52,9 @@ function commentsArray() {
     const profileHeader = document.createElement('div');
     profileHeader.classList.add('comment__profile__header');
 
+    // THESE NEED TO BE INSIDE THE COMMENT DIVS
+    // - ask for some help, perhaps an easier fix //
+
     // create the h4 - user - array
     const userName = document.createElement('h4')
     // console.log('h4') <--works
@@ -67,6 +70,9 @@ function commentsArray() {
     const userComments = document.createElement('p');
     userComments.innerText = commentList[i].comments;
 
+    // THESE NEED TO BE INSIDE THE COMMENT DIVS
+    // - ask for some help, perhaps an easier fix //
+
     //remember this order does matter
     commentArticle.appendChild(commentImg);
     commentArticle.appendChild(commentContainer);
@@ -75,7 +81,7 @@ function commentsArray() {
     commentArticle.appendChild(userDate);
     commentArticle.appendChild(userComments);
 
-    //need to ask questions about the code, mostly working but for some reason does not line up properly
+    //need to ask questions about the code, mostly working but for some reason does not line up properly, is there a way to close a div in JS or do I have to redo my code?
 
     // glue everything together <---
     parentComment.appendChild(commentArticle);

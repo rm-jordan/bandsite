@@ -18,7 +18,7 @@
     &__soundcloud {
       position: absolute;
       top: 60%;
-      width: 80%;
+      width: 35%;
     }
     @include small-tablet {
       font-size: 36px;
@@ -27,5 +27,13 @@
       font-size: 60px;
       padding-left: 40px;
     }
+  }
+}
+
+//BELOW REQUIRES MUCH STYLING AND SIZING EDITS
+.shows__box {
+  @include tablet {
+    display: flex;
+    flex-direction: column;
   }
 }

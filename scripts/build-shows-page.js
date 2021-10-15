@@ -49,8 +49,36 @@ const concertList = [
   }
 ]
 
-console.log(concertList);
-//  set show array above, this is all I know what to do for now//
+// console.table(concertList); <---works
 
 
-// need to add things using the above array, not quite sure how it can be done. literally add the section to the html using JS? insert it after the hero?
+//lets grab the parent element
+let parentList = document.querySelector('.shows__title');
+
+// console.log(parentList); <---works
+
+showsArray = () => {
+  for(let i = 0; i < concertList.length; i++) {
+    // console.log(concertList[i]) <---works
+
+    //now lets create the div class shows__container
+
+    const showsContainer = document.createElement('div');
+    showsContainer.classList.add('shows__container');
+    // console.log(showsContainer); <--works
+
+    // create h4 class shows__header from array - dateHeader
+
+    const dateTitle = document.createElement('h4')
+    dateTitle.classList.add("shows__header");
+    dateTitle.innerText = concertList[i].dateHeader;
+
+    showsContainer.appendChild(dateTitle);
+
+
+    // glue everything together <---
+    parentList.appendChild(showsContainer);
+  }
+}
+
+showsArray();

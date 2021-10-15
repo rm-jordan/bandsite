@@ -21,7 +21,7 @@ let commentList = [
 
 // lets grab the parent element
 let parentComment = document.querySelector('.comment__section');
-// console.log(parent);  <---works
+
 
 function commentsArray() {
   for(let i = 0; i < commentList.length; i++){

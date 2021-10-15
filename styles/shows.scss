@@ -31,7 +31,7 @@
 }
 
 //BELOW REQUIRES MUCH STYLING AND SIZING EDITS
-.shows__box {
+.shows__container {
   @include tablet {
     display: flex;
     flex-direction: column;

@@ -57,7 +57,7 @@ body {
 }
 
 @media (min-width: 768px) {
-  .shows__box {
+  .shows__container {
     display: flex;
     flex-direction: column;
   }

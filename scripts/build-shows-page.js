@@ -69,11 +69,53 @@ showsArray = () => {
 
     // create h4 class shows__header from array - dateHeader
 
-    const dateTitle = document.createElement('h4')
+    const dateTitle = document.createElement('h4');
     dateTitle.classList.add("shows__header");
     dateTitle.innerText = concertList[i].dateHeader;
 
+    // create p - array - date
+    const dateInfo = document.createElement('p');
+    // may need to create class name here later
+    dateInfo.innerText = concertList[i].date;
+
+
+    // create h4 - shows__header - array - venueHeader
+    const showVenue = document.createElement('h4');
+    showVenue.classList.add('shows__header');
+    showVenue.innerText = concertList[i].venueHeader;
+
+    // create p from array - venue
+    const venueTitle = document.createElement('p');
+    //may need to create class name here later
+    venueTitle.innerText = concertList[i].venue;
+
+    // create h4 shows__header - array - locationHeader
+    const showLocation = document.createElement('h4');
+    showLocation.classList.add('shows__header');
+    showLocation.innerText = concertList[i].locationHeader;
+
+    //create p - array -location
+    const locationTitle = document.createElement('p');
+    // may need to create class name here later
+    locationTitle.innerText = concertList[i].venue;
+
+    // create a - button - class - shows__btn 
+    const showButton = document.createElement('a');
+    showButton.innerText = 'BUY TICKETS';
+    showButton.setAttribute('href', '#');
+    showButton.classList.add('shows__btn');
+
+    ///ask about whether or not they want us to use an a tag and style or if we can use an actual button -- if so change button 
+
+
+
     showsContainer.appendChild(dateTitle);
+    showsContainer.appendChild(dateInfo);
+    showsContainer.appendChild(showVenue);
+    showsContainer.appendChild(venueTitle);
+    showsContainer.appendChild(showLocation);
+    showsContainer.appendChild(locationTitle);
+    showsContainer.appendChild(showButton);
 
 
     // glue everything together <---

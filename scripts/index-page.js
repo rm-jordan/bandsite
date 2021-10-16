@@ -88,5 +88,44 @@ function commentsArray() {
 commentsArray();
 
 
-// apparently we have a new comment to add to the top of the box  -- shit
+// add comments from form to box in index page
+// make sure to make the styles similar
 
+// records.unshift({
+//   album: 'Abbey Road',
+//   artist: "The Beatles",
+//   year: 1969,
+//   image: "https://upload.wikimedia.org/wikipedia/en/4/42/Beatles_-_Abbey_Road.jpg"
+// });
+
+
+// recordsList.innerHTML = '';
+// addElementsToHTML(records);
+
+// const form = document.querySelector('.form-container');
+
+// form.addEventListener("submit", function(event) {
+// event.preventDefault();
+// const record = {
+//   album: event.target.album.value,
+//   artist: event.target.artist.value,
+//   year: event.target.year.value,
+//   image: event.target.image.value
+// }
+
+// addElementsToHTML([record]);
+
+// });
+
+// so I need to attach the most recent comment to the top of the 
+// "comment__section"
+
+const myForm = document.getElementById('form');
+
+myForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log('form has been submitted');
+  console.log(e.target.name.value);
+  console.log(e.target.comment__textarea.value);
+});
+// console.log(myForm);

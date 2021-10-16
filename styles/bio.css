@@ -27,7 +27,6 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 1px solid green;
   font-size: 16px;
 }
 
@@ -257,6 +256,8 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid red;
 }
 
 .comment__form {
@@ -303,8 +304,8 @@ p {
   background-color: #323232;
   border-radius: 4px;
   width: 100%;
-  margin-top: 24px;
   height: 40px;
+  font-size: 14px;
 }
 
 .comment__button:hover {
@@ -312,8 +313,14 @@ p {
   color: #ffffff;
 }
 
+.comment {
+  padding-top: 16px;
+}
 .comment__container {
   display: flex;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  border-bottom: 1px solid blue;
 }
 .comment .comment__profile__header {
   display: flex;

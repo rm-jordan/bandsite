@@ -26,27 +26,25 @@ let parentComment = document.querySelector('.comment__section');
 function commentsArray() {
   for(let i = 0; i < commentList.length; i++){
     //create article
-    // console.log(commentList[i]); //iterate through the list
-    //above iteration is working
 
     //now create the article element
     const commentArticle = document.createElement('article');
-    // console.log(commentArticle); // <---works
+
     commentArticle.classList.add('comment__container');
-    // console.log(commentArticle); <---works
+  
 
     //img element
     const commentImg = document.createElement('img');
-    // console.log(commentImg); <---works
+  
     commentImg.classList.add('comment__img');
-    // console.log(commentImg); <--works
+    
     commentImg.setAttribute('src', '../Assets/Images/default.png');
 
     // create the div - comment__profile__container
     const commentContainer = document.createElement('div')
-    // console.log(commentContainer);  <--works
+
     commentContainer.classList.add('comment__profile__container');
-    // console.log(commentContainer); <--works
+    
 
     // create the div - comment__profile__header
     const profileHeader = document.createElement('div');
@@ -69,8 +67,6 @@ function commentsArray() {
     const userComments = document.createElement('p');
     userComments.innerText = commentList[i].comments;
 
-    // THESE NEED TO BE INSIDE THE COMMENT DIVS
-    // - ask for some help, perhaps an easier fix //
 
     //remember this order does matter
     commentArticle.appendChild(commentImg); // <-- check
@@ -80,7 +76,7 @@ function commentsArray() {
     userName.appendChild(userDate); // <--check
     userDate.appendChild(userComments);
 
-    //need to ask questions about the code, mostly working but for some reason does not line up properly, is there a way to close a div in JS or do I have to redo my code?
+  
 
     // glue everything together <---
     parentComment.appendChild(commentArticle);

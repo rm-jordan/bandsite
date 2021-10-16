@@ -73,8 +73,8 @@ function commentsArray(comment) {
     commentArticle.appendChild(commentContainer); //<--check
     commentContainer.appendChild(profileHeader); // <--check
     profileHeader.appendChild(userName); // <-- check
-    userName.appendChild(userDate); // <--check
-    userDate.appendChild(userComments);
+    profileHeader.appendChild(userDate); // <--check
+    commentContainer.appendChild(userComments);
 
   
 

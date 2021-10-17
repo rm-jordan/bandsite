@@ -209,13 +209,12 @@ p {
 .comment__header {
   padding-left: 4px;
 }
-.test {
+.comment__container {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 16px;
-  border-bottom: 1px solid red;
-  //color obviously needs to be adjusted
+  border-bottom: 1px solid #e1e1e1;
 }
 
 .comment__form {
@@ -226,36 +225,41 @@ p {
 }
 
 .comment__form__header {
-  // font-family: "Avenir LT Pro Demi";
   color: #afafaf;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .comment__img {
   align-self: flex-start;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 16px;
+  margin-top: 16px;
 }
 
 .comment__input {
   width: 100%;
   height: 36px;
   border-radius: 4px;
-  border: 1px solid black;
+  border: 1px solid #323232;
+  color: #323232;
   margin-bottom: 16px;
   margin-top: 4px;
   font-family: "AvenirNext LT Pro";
+  font-size: 14px;
 }
 
 .comment__textarea {
   width: 100%;
   height: 100px;
+  border: 1px solid #323232;
   border-radius: 4px;
   font-family: "AvenirNext LT Pro";
   margin-top: 4px;
   margin-bottom: 16px;
+  color: #323232;
+  font-size: 14px;
 }
 
 .comment__button {
@@ -278,12 +282,13 @@ p {
     display: flex;
     padding-bottom: 16px;
     padding-top: 16px;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid #e1e1e1;
   }
 
   .comment__profile__header {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 16px;
   }
 }
 

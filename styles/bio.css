@@ -250,14 +250,7 @@ p {
 
 .comment__header {
   padding-left: 4px;
-}
-
-.comment__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 16px;
-  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 2px;
 }
 
 .comment__form {
@@ -327,6 +320,11 @@ p {
   padding-bottom: 16px;
   padding-top: 16px;
   border-bottom: 1px solid #e1e1e1;
+}
+@media (min-width: 467px) {
+  .comment__container {
+    padding: 8px;
+  }
 }
 .comment .comment__profile__header {
   display: flex;

@@ -110,11 +110,11 @@ showsArray = () => {
 
 
     showsContainer.appendChild(dateTitle);
-    showsContainer.appendChild(dateInfo);
+    dateTitle.appendChild(dateInfo);
     showsContainer.appendChild(showVenue);
-    showsContainer.appendChild(venueTitle);
+    showVenue.appendChild(venueTitle);
     showsContainer.appendChild(showLocation);
-    showsContainer.appendChild(locationTitle);
+    showLocation.appendChild(locationTitle);
     showsContainer.appendChild(showButton);
 
 

@@ -84,21 +84,24 @@ h1 {
     flex-direction: column;
   }
 }
-@media (min-width: 768px) {
-  .shows__container {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-}
-
 .shows__header {
   font-size: 12px;
   color: #afafaf;
   padding: 4px 0px;
 }
+@media (min-width: 467px) {
+  .shows__header {
+    font-size: 14px;
+  }
+}
 
 .shows p {
   padding-bottom: 16px;
+}
+@media (min-width: 467px) {
+  .shows p {
+    font-size: 16px;
+  }
 }
 
 .shows a {
@@ -106,11 +109,25 @@ h1 {
 }
 
 .shows__btn {
-  width: 100%;
   color: #ffffff;
   background-color: #323232;
   border-radius: 4px;
-  width: 100%;
+  width: 94%;
   height: 40px;
   font-size: 14px;
+}
+@media (min-width: 467px) {
+  .shows__btn {
+    font-size: 16px;
+  }
+}
+@media (min-width: 550px) {
+  .shows__btn {
+    width: 85%;
+  }
+}
+@media (min-width: 768px) {
+  .shows__btn {
+    width: 18%;
+  }
 }/*# sourceMappingURL=shows.css.map */

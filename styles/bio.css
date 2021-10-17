@@ -44,6 +44,11 @@ h2 {
     padding-bottom: 32px;
   }
 }
+@media (min-width: 1200px) {
+  h2 {
+    padding-top: 36px;
+  }
+}
 
 .nav {
   background-color: #323232;

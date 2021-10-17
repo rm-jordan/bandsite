@@ -19,6 +19,9 @@ h2 {
     padding-top: 24px;
     padding-bottom: 32px;
   }
+  @include desktop {
+    padding-top: 36px;
+  }
 }
 
 .nav {

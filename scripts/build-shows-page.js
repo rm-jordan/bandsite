@@ -97,12 +97,12 @@ showsArray = () => {
     //create p - array -location
     const locationTitle = document.createElement('p');
     // may need to create class name here later
-    locationTitle.innerText = concertList[i].venue;
+    locationTitle.innerText = concertList[i].location;
 
-    // create a - button - class - shows__btn 
-    const showButton = document.createElement('a');
+    // create a - button  shows__btn 
+    const showButton = document.createElement('button');
     showButton.innerText = 'BUY TICKETS';
-    showButton.setAttribute('href', '#');
+
     showButton.classList.add('shows__btn');
 
     ///ask about whether or not they want us to use an a tag and style or if we can use an actual button -- if so change button 

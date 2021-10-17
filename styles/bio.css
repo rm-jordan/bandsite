@@ -27,6 +27,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: 1px solid green;
   font-size: 16px;
 }
 
@@ -40,7 +41,7 @@ h2 {
   h2 {
     font-size: 36px;
     padding-top: 24px;
-    padding-bottom: 16px;
+    padding-bottom: 32px;
   }
 }
 
@@ -95,6 +96,12 @@ h2 {
   .nav__list__link--bio {
     padding-bottom: 24px;
     margin-bottom: -24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav__list__link--show {
+    margin: 0px 48px;
   }
 }
 
@@ -155,8 +162,13 @@ p {
 }
 
 @media (min-width: 768px) {
-  .about {
-    padding-bottom: 32px;
+  .about__container {
+    padding: 16px 48px 32px 48px;
+  }
+}
+@media (min-width: 1200px) {
+  .about__container {
+    padding: 16px 64px 32px 64px;
   }
 }
 .about__img {
@@ -186,6 +198,11 @@ p {
 }
 .about__header {
   font-weight: 700;
+}
+@media (min-width: 550px) {
+  .about__header {
+    padding-top: 16px;
+  }
 }
 @media (min-width: 768px) {
   .about__header {
@@ -252,6 +269,16 @@ p {
   padding-left: 4px;
   padding-bottom: 2px;
 }
+@media (min-width: 550px) {
+  .comment__header {
+    padding-bottom: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .comment__header {
+    padding-left: 16px;
+  }
+}
 
 .comment__form {
   display: flex;
@@ -272,6 +299,19 @@ p {
   border-radius: 50%;
   margin-right: 16px;
   margin-top: 16px;
+}
+@media (min-width: 768px) {
+  .comment__img {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .comment__section {
+    padding: 32px 32px;
+    margin: 0px 48px;
+  }
 }
 
 .comment__input {
@@ -306,6 +346,12 @@ p {
   height: 40px;
   font-size: 14px;
 }
+@media (min-width: 768px) {
+  .comment__button {
+    width: 35%;
+    align-self: flex-end;
+  }
+}
 
 .comment__button:hover {
   background-color: #000000;
@@ -324,6 +370,17 @@ p {
 @media (min-width: 467px) {
   .comment__container {
     padding: 8px;
+  }
+}
+@media (min-width: 550px) {
+  .comment .form__container {
+    padding-bottom: 32px;
+  }
+}
+@media (min-width: 768px) {
+  .comment .form__container {
+    padding: 32px 32px;
+    margin: 0px 48px;
   }
 }
 .comment .comment__profile__header {

@@ -5,7 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  // border: 1px solid green;
+  border: 1px solid green;
   font-size: 16px;
 }
 
@@ -17,7 +17,7 @@ h2 {
   @include tablet {
     font-size: 36px;
     padding-top: 24px;
-    padding-bottom: 16px;
+    padding-bottom: 32px;
   }
 }
 
@@ -65,6 +65,12 @@ h2 {
   @include tablet {
     padding-bottom: 24px;
     margin-bottom: -24px;
+  }
+}
+
+.nav__list__link--show {
+  @include tablet {
+    margin: 0px 48px;
   }
 }
 
@@ -119,8 +125,13 @@ p {
 }
 
 .about {
-  @include tablet {
-    padding-bottom: 32px;
+  &__container {
+    @include tablet {
+      padding: 16px 48px 32px 48px;
+    }
+    @include desktop {
+      padding: 16px 64px 32px 64px;
+    }
   }
   &__img {
     width: 100%;
@@ -146,6 +157,9 @@ p {
     }
   }
   &__header {
+    @include small-tablet {
+      padding-top: 16px;
+    }
     font-weight: 700;
     @include tablet {
       font-size: 24px;
@@ -209,6 +223,12 @@ p {
 .comment__header {
   padding-left: 4px;
   padding-bottom: 2px;
+  @include small-tablet {
+    padding-bottom: 16px;
+  }
+  @include tablet {
+    padding-left: 16px;
+  }
 }
 // .comment__container {
 //   display: flex;
@@ -236,6 +256,17 @@ p {
   border-radius: 50%;
   margin-right: 16px;
   margin-top: 16px;
+  @include tablet {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.comment__section {
+  @include tablet {
+    padding: 32px 32px;
+    margin: 0px 48px;
+  }
 }
 
 .comment__input {
@@ -269,12 +300,16 @@ p {
   width: 100%;
   height: 40px;
   font-size: 14px;
+  @include tablet {
+    width: 35%;
+    align-self: flex-end;
+  }
 }
 
 .comment__button:hover {
   background-color: #000000;
   color: #ffffff;
-} ///works
+}
 
 .comment {
   padding-top: 16px;
@@ -285,6 +320,16 @@ p {
     border-bottom: 1px solid #e1e1e1;
     @include wide-phone {
       padding: 8px;
+    }
+  }
+
+  .form__container {
+    @include small-tablet {
+      padding-bottom: 32px;
+    }
+    @include tablet {
+      padding: 32px 32px;
+      margin: 0px 48px;
     }
   }
 

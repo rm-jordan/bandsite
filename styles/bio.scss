@@ -218,6 +218,9 @@ p {
 ///need to rename and do scss, do not name comment, maybe use form section, form__header etc. etc.
 .comment {
   padding: 12px;
+  @include desktop {
+    padding: 0px 84px;
+  }
 }
 
 .comment__header {
@@ -228,6 +231,9 @@ p {
   }
   @include tablet {
     padding-left: 16px;
+  }
+  @include desktop {
+    padding-left: 0px;
   }
 }
 // .comment__container {
@@ -266,6 +272,9 @@ p {
   @include tablet {
     padding: 32px 32px;
     margin: 0px 48px;
+  }
+  @include desktop {
+    padding-right: 136px;
   }
 }
 

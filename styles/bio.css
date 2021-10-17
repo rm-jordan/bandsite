@@ -264,6 +264,11 @@ p {
 .comment {
   padding: 12px;
 }
+@media (min-width: 1200px) {
+  .comment {
+    padding: 0px 84px;
+  }
+}
 
 .comment__header {
   padding-left: 4px;
@@ -277,6 +282,11 @@ p {
 @media (min-width: 768px) {
   .comment__header {
     padding-left: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  .comment__header {
+    padding-left: 0px;
   }
 }
 
@@ -311,6 +321,11 @@ p {
   .comment__section {
     padding: 32px 32px;
     margin: 0px 48px;
+  }
+}
+@media (min-width: 1200px) {
+  .comment__section {
+    padding-right: 136px;
   }
 }
 

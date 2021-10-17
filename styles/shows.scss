@@ -1,6 +1,18 @@
 @use "./partials/typography" as *;
 @use "./partials/mixins" as *;
 
+.nav__list__link--show {
+  border-bottom: 3px solid #ffffff;
+  padding-bottom: 6px;
+  @include tablet {
+    padding-bottom: 22px;
+    margin-bottom: -22px;
+  }
+}
+.nav__list__link--bio {
+  border-bottom: none;
+}
+
 .shows__hero {
   background-image: url("../Assets/Images/hero-shows.jpg");
   width: 100%;
@@ -24,20 +36,66 @@
   }
 }
 
+.shows__hero__container {
+  padding-top: 16px;
+  @include desktop {
+    display: flex;
+    padding-top: 120px;
+  }
+}
+
 .soundcloud {
-  // position: absolute;
-  top: 60%;
-  height: 20vw;
+  width: 74%;
+  height: 75px;
+  position: absolute;
+  top: 58%;
+  padding-left: 16px;
+  @include wide-phone {
+    top: 44%;
+  }
+  @include small-tablet {
+    height: 120px;
+  }
+  @include tablet {
+    width: 50%;
+    height: 130px;
+  }
+  @include large-tablet {
+    width: 45%;
+    top: 50;
+  }
+  @include desktop {
+    position: relative;
+    margin-left: 48px;
+    margin-top: 36px;
+    width: 40%;
+  }
 }
 
 span {
-  font-size: 24px;
-  font-weight: 400;
+  font-size: 16px;
   color: #ffffff;
+  @include small-tablet {
+    font-size: 20px;
+  }
+  @include tablet {
+    font-size: 24px;
+    font-weight: 400;
+  }
 }
 h1 {
+  padding-left: 16px;
+  font-size: 24px;
   color: #ffffff;
-  font-size: 36px;
+  @include small-tablet {
+    font-size: 30px;
+  }
+  @include tablet {
+    font-size: 36px;
+  }
+  @include desktop {
+    font-size: 48px;
+  }
 }
 
 .shows {
@@ -55,8 +113,10 @@ h1 {
       flex-direction: column;
     }
     @include tablet {
-      // flex-direction: row;
-      // justify-content: space-around;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-right: 16px;
     }
   }
 }
@@ -71,6 +131,7 @@ h1 {
 }
 
 .shows p {
+  color: #323232;
   padding-bottom: 16px;
   @include wide-phone {
     font-size: 16px;
@@ -97,4 +158,8 @@ h1 {
   @include tablet {
     width: 18%;
   }
+}
+
+.shows__btn:hover {
+  background-color: #000000;
 }

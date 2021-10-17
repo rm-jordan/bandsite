@@ -2,6 +2,7 @@ $midsize-phone: 400px;
 $wide-phone: 467px;
 $small-tablet: 550px;
 $tablet-width: 768px;
+$large-tablet: 987px;
 $desktop-width: 1200px;
 
 @mixin midsize-phone {
@@ -18,6 +19,12 @@ $desktop-width: 1200px;
 
 @mixin small-tablet {
   @media (min-width: $small-tablet) {
+    @content;
+  }
+}
+
+@mixin large-tablet {
+  @media (min-width: $large-tablet) {
     @content;
   }
 }

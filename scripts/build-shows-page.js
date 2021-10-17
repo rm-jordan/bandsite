@@ -105,10 +105,8 @@ showsArray = () => {
 
     showButton.classList.add('shows__btn');
 
-    ///ask about whether or not they want us to use an a tag and style or if we can use an actual button -- if so change button 
 
-
-
+    
     showsContainer.appendChild(dateTitle);
     dateTitle.appendChild(dateInfo);
     showsContainer.appendChild(showVenue);

@@ -106,3 +106,10 @@ myForm.addEventListener("submit", (e) => {
 
   commentsArray(commentList);
 });
+
+
+// This is my api key
+
+// {
+// "api_key": "aa471e79-f431-4c44-b489-7f88a7efba89"
+// }

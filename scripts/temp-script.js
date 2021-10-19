@@ -31,25 +31,58 @@ axios.get(`${apiURL}/showdates/?api_key=${apiKEY}`)
     const showsContainer = document.createElement('div');
     showsContainer.classList.add('shows__container');
 
-    // create shows header in h4
+    // create shows header in h4 - innerText - string
     const dateTitle = document.createElement('h4');
     dateTitle.classList.add("shows__header");
     dateTitle.innerText = 'DATES';
 
-     // create p - array - date
+     // create p - show.date
     const dateInfo = document.createElement('p');
      // may need to create class name here later
     dateInfo.innerText = shows.date;
 
     
+    // create shows header in h4 - innerText - string
+    const showVenue = document.createElement('h4');
+    showVenue.classList.add('shows__header');
+    showVenue.innerText = 'VENUE';
+
+
+    // create p from array - venue
+    const venueTitle = document.createElement('p');
+    //may need to create class name here later
+    venueTitle.innerText = shows.place;
+
+    // create h4 shows__header string - locationHeader
+    const showLocation = document.createElement('h4');
+    showLocation.classList.add('shows__header');
+    showLocation.innerText = 'LOCATION';
+
+    //create p - API - show.location
+    const locationTitle = document.createElement('p');
+    // may need to create class name here later
+    locationTitle.innerText = shows.location;
+
+
+    // create a - button  shows__btn 
+    const showButton = document.createElement('button');
+    showButton.innerText = 'BUY TICKETS';
+
+    showButton.classList.add('shows__btn');
+
 
 
     showsContainer.appendChild(dateTitle);
-
-
     // glue everything together <---
     parentItem.appendChild(showsContainer);
     dateTitle.appendChild(dateInfo);
+    showsContainer.appendChild(showVenue);
+    showVenue.appendChild(venueTitle);
+    showsContainer.appendChild(showLocation);
+    showLocation.appendChild(locationTitle);
+    showsContainer.appendChild(showButton);
+
+    // everything is rendering, date needs to be fixed the fix is probably what I did for the forms and there appears to be no day of the week so it will be ex: "Monday" +  fixed date / a guess
 
   });
 

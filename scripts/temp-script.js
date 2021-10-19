@@ -12,11 +12,19 @@ const apiKEY = 'aa471e79-f431-4c44-b489-7f88a7efba89';
 
 const apiURL = 'https://project-1-api.herokuapp.com'
 
-axios.get(`${apiURL}/showdates/?api_key=${apiKEY}`).then((response)=> {
+axios.get(`${apiURL}/showdates/?api_key=${apiKEY}`)
+.then((response)=> {
+  // console.log(response); // <--works
+  // console.log(response.data); // <--works
 
-  console.log(response); // <--works
+  //loop through the data array
+  response.data.forEach((shows) => {
+    console.log(shows);
 
-  console.log(response.data); // <--works
+    //need to create the element div class = 'shows__container'
+    const showsContainer = document.createElement('div');
+    showsContainer.classList.add('shows__container');
+  });
 
 }).catch((error)=> {
   console.log(error)

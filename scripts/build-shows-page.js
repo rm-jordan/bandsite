@@ -51,6 +51,16 @@ const concertList = [
 
 // console.table(concertList); <---works
 
+//  all the above code will need to be deleted, just kept for a reference:
+
+// This is my api key
+
+// {
+// "api_key": "aa471e79-f431-4c44-b489-7f88a7efba89"
+// }
+
+
+
 
 //lets grab the parent element
 let parentList = document.querySelector('.shows__title');
@@ -122,10 +132,3 @@ showsArray = () => {
 }
 
 showsArray();
-
-
-// This is my api key
-
-// {
-// "api_key": "aa471e79-f431-4c44-b489-7f88a7efba89"
-// }

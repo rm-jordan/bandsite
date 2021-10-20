@@ -9,7 +9,7 @@
 // "api_key": "aa471e79-f431-4c44-b489-7f88a7efba89"
 // }
 
-const apiKEY = 'aa471e79-f431-4c44-b489-7f88a7efba89';
+const apiKEY = 'aa471e79-f431-4c44-b489-7f88a7efba89';   
 
 const apiURL = 'https://project-1-api.herokuapp.com'
 

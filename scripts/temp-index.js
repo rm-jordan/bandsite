@@ -1,0 +1,1 @@
+// this is where I will temporarily do the JS for the index page and comments

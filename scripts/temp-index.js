@@ -53,17 +53,17 @@ profileHeader.classList.add('comment__profile__header');
 // create the h4 - user - array
 const userName = document.createElement('h4')
 // console.log('h4') <--works
-// userName.innerText = comment[i].user;
+userName.innerText = comments.name
 // console.log(userName); <-- works
 
 // create the p - date - array
 const userDate = document.createElement('p')
-// userDate.innerText = comment[i].date;
+userDate.innerText = comments.timestamp
 
 
 // create the p - enclosed in profile header - array comments
 const userComments = document.createElement('p');
-// userComments.innerText = comment[i].comments;
+userComments.innerText = comments.comment
 
 
 commentArticle.appendChild(commentImg); // <-- check

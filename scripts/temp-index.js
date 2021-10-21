@@ -19,7 +19,7 @@ let parentComment = document.querySelector('.comment__section');
 
 // GET
 
-
+function getAllComments () {
 axios.get((`${apiURL}/comments/?api_key=${apiKEY}`)).then((response) => {
 // console.log(response) // <-working
 response.data.forEach((comments) => {
@@ -58,7 +58,7 @@ userName.innerText = comments.name
 
 // create the p - date - array
 const userDate = document.createElement('p')
-userDate.innerText = comments.timestamp
+userDate.innerText = new Date(comments.timestamp ).toLocaleDateString()
 
 
 // create the p - enclosed in profile header - array comments
@@ -82,4 +82,45 @@ parentComment.appendChild(commentArticle);
 }).catch((error) => {
   console.log(error);
 });
+}
 
+// Replace array parts
+
+
+
+
+
+
+const myForm = document.getElementById('form');
+let commentSection = document.querySelector('.comment__section')
+
+myForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  // let newestComment = {
+  //   user: e.target.name.value,
+  //   comments: e.target.comment__textarea.value,
+  //   date: new Date(Date.now()).toLocaleDateString()
+  // }
+
+    axios.post(`${apiURL}/comments/?api_key=${apiKEY}`, {
+      name: e.target.name.value,
+      comment: e.target.comment__textarea.value
+    }).then((response)=> {
+      console.log(response)
+      commentSection.innerHTML = '';
+      getAllComments()
+    }).catch((error) => {
+      console.log(error);
+    });
+
+  console.log(newestComment);
+
+
+  // commentList.unshift(newestComment);
+
+  // commentsArray(commentList);
+});
+getAllComments();
+
+//set width of the comment boxes 100%

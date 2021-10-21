@@ -82,13 +82,12 @@ axios.get(`${apiURL}/showdates/?api_key=${apiKEY}`)
     showLocation.appendChild(locationTitle);
     showsContainer.appendChild(showButton);
 
-    // everything is rendering, date needs to be fixed the fix is probably what I did for the forms and there appears to be no day of the week so it will be ex: "Monday" +  fixed date / a guess
-
   });
 
 }).catch((error)=> {
   console.log(error)
 });
+
 
 
 

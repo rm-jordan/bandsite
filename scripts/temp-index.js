@@ -97,11 +97,6 @@ let commentSection = document.querySelector('.comment__section')
 myForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  // let newestComment = {
-  //   user: e.target.name.value,
-  //   comments: e.target.comment__textarea.value,
-  //   date: new Date(Date.now()).toLocaleDateString()
-  // }
 
     axios.post(`${apiURL}/comments/?api_key=${apiKEY}`, {
       name: e.target.name.value,
@@ -116,11 +111,7 @@ myForm.addEventListener("submit", (e) => {
 
   console.log(newestComment);
 
-
-  // commentList.unshift(newestComment);
-
-  // commentsArray(commentList);
 });
 getAllComments();
 
-//set width of the comment boxes 100%
+//set width of the comment boxes 100% (max-width)

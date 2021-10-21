@@ -39,7 +39,10 @@ axios.get(`${apiURL}/showdates/?api_key=${apiKEY}`)
      // create p - show.date
     const dateInfo = document.createElement('p');
      // may need to create class name here later
-    dateInfo.innerText = shows.date;
+    let showDate = parseInt(shows.date)
+    // console.log(showDate);
+    dateInfo.innerText = new Date(showDate).toLocaleDateString('en-US', {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    // new Date(comments.timestamp )
 
     
     // create shows header in h4 - innerText - string

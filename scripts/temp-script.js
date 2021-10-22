@@ -41,7 +41,7 @@ axios.get(`${apiURL}/showdates/?api_key=${apiKEY}`)
      // may need to create class name here later
     let showDate = parseInt(shows.date)
     // console.log(showDate);
-    dateInfo.innerText = new Date(showDate).toLocaleDateString('en-US', {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    dateInfo.innerText = new Date(showDate).toLocaleDateString('en-US', {weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' });
     // new Date(comments.timestamp )
 
     

@@ -41,6 +41,7 @@
   @include desktop {
     display: flex;
     padding-top: 7.5rem;
+    justify-content: space-around;
   }
 }
 

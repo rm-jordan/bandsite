@@ -2,7 +2,6 @@ const apiKEY = 'aa471e79-f431-4c44-b489-7f88a7efba89';
 
 const apiURL = 'https://project-1-api.herokuapp.com'
 
-// parent element
 
 let parentItem = document.querySelector('.shows__title');
 

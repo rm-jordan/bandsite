@@ -1,123 +1,55 @@
-const concertList = [ 
-  { 
-    dateHeader: 'DATES',
-    date: 'Mon Sept 06 2021',
-    venueHeader: 'VENUE',
-    venue: 'Ronald Lane',
-    locationHeader: 'LOCATION',
-    location: 'San Francisco, CA'
-  },
-  {
-    dateHeader: 'DATES',
-    date: 'Tue Sept 21 2021',
-    venueHeader: 'VENUE',
-    venue: 'Pier 3 East',
-    locationHeader: 'LOCATION',
-    location: 'San Francisco, CA'
-  },
-  {
-    dateHeader: 'DATES',
-    date: 'Fri Oct 15 2021',
-    venueHeader: 'VENUE',
-    venue: 'View Lounge',
-    locationHeader: 'LOCATION',
-    location: 'San Francisco, CA'
-  },
-  {
-    dateHeader: 'DATES',
-    date: 'Sat Nov 06 2021',
-    venueHeader: 'VENUE',
-    venue: 'Hyatt Agency',
-    locationHeader: 'LOCATION',
-    location: 'San Francisco, CA'
-  },
-  {
-    dateHeader: 'DATES',
-    date: 'Fri Nov 26 2021',
-    venueHeader: 'VENUE',
-    venue: 'Moscow Center',
-    locationHeader: 'LOCATION',
-    location: 'San Francisco, CA'
-  },
-  {
-    dateHeader: 'DATES',
-    date: 'Wed Dec 15 2021',
-    venueHeader: 'VENUE',
-    venue: 'Press Club',
-    locationHeader: 'LOCATION',
-    location: 'San Francisco, CA'
-  }
-]
+const apiKEY = 'aa471e79-f431-4c44-b489-7f88a7efba89';   
 
-// console.table(concertList); <---works
+const apiURL = 'https://project-1-api.herokuapp.com'
 
-//  all the above code will need to be deleted, just kept for a reference:
+// parent element
 
-// This is my api key
-
-// {
-// "api_key": "aa471e79-f431-4c44-b489-7f88a7efba89"
-// }
+let parentItem = document.querySelector('.shows__title');
 
 
+axios.get(`${apiURL}/showdates/?api_key=${apiKEY}`)
+.then((response)=> {
 
-
-//lets grab the parent element
-let parentList = document.querySelector('.shows__title');
-
-// console.log(parentList); <---works
-
-showsArray = () => {
-  for(let i = 0; i < concertList.length; i++) {
-    // console.log(concertList[i]) <---works
-
-    //now lets create the div class shows__container
+  response.data.forEach((shows) => {
+    console.log(shows);
 
     const showsContainer = document.createElement('div');
     showsContainer.classList.add('shows__container');
-    // console.log(showsContainer); <--works
-
-    // create h4 class shows__header from array - dateHeader
 
     const dateTitle = document.createElement('h4');
     dateTitle.classList.add("shows__header");
-    dateTitle.innerText = concertList[i].dateHeader;
+    dateTitle.innerText = 'DATES';
 
-    // create p - array - date
+
     const dateInfo = document.createElement('p');
-    // may need to create class name here later
-    dateInfo.innerText = concertList[i].date;
+    let showDate = parseInt(shows.date)
 
+    dateInfo.innerText = new Date(showDate).toLocaleDateString('en-US', {weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' });
 
-    // create h4 - shows__header - array - venueHeader
+    
     const showVenue = document.createElement('h4');
     showVenue.classList.add('shows__header');
-    showVenue.innerText = concertList[i].venueHeader;
+    showVenue.innerText = 'VENUE';
 
-    // create p from array - venue
     const venueTitle = document.createElement('p');
-    //may need to create class name here later
-    venueTitle.innerText = concertList[i].venue;
+    venueTitle.innerText = shows.place;
 
-    // create h4 shows__header - array - locationHeader
     const showLocation = document.createElement('h4');
     showLocation.classList.add('shows__header');
-    showLocation.innerText = concertList[i].locationHeader;
+    showLocation.innerText = 'LOCATION';
 
-    //create p - array -location
     const locationTitle = document.createElement('p');
-    // may need to create class name here later
-    locationTitle.innerText = concertList[i].location;
+    locationTitle.innerText = shows.location;
 
-    // create a - button  shows__btn 
+
     const showButton = document.createElement('button');
     showButton.innerText = 'BUY TICKETS';
 
     showButton.classList.add('shows__btn');
 
 
-    
     showsContainer.appendChild(dateTitle);
+    parentItem.appendChild(showsContainer);
     dateTitle.appendChild(dateInfo);
     showsContainer.appendChild(showVenue);
     showVenue.appendChild(venueTitle);
@@ -125,10 +57,8 @@ showsArray = () => {
     showLocation.appendChild(locationTitle);
     showsContainer.appendChild(showButton);
 
+  });
 
-    // glue everything together <---
-    parentList.appendChild(showsContainer);
-  }
-}
-
-showsArray();
+}).catch((error)=> {
+  console.log(error)
+});

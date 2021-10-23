@@ -1,115 +1,83 @@
-let commentList = [
-  {
-    user: 'Connor Walton',
-    date: '02/17/2021',
-    comments: 'This is art. This is  inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.'
-  },
-  {user: 'Emilie Beach',
-  date: '01/09/2021',
-  comments: 'I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.'
+const apiKEY = 'aa471e79-f431-4c44-b489-7f88a7efba89';   
 
-  },
-  {
-    user: 'Miles Acosta',
-    date: '12/20/2020',
-    comments: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
-  }
-]
+const apiURL = 'https://project-1-api.herokuapp.com'
 
 
-
-
-// lets grab the parent element
 let parentComment = document.querySelector('.comment__section'); 
 
+function compareStamp (a,b) {
 
-function commentsArray(comment) {
-  for(let i = 0; i < comment.length; i++){
-    //create article
-
-    //now create the article element
-    const commentArticle = document.createElement('article');
-
-    commentArticle.classList.add('comment__container');
-  
-
-    //img element
-    const commentImg = document.createElement('img');
-  
-    commentImg.classList.add('comment__img');
-    
-    commentImg.setAttribute('src', '../Assets/Images/default.png');
-
-    // create the div - comment__profile__container
-    const commentContainer = document.createElement('div')
-
-    commentContainer.classList.add('comment__profile__container');
-    
-
-    // create the div - comment__profile__header
-    const profileHeader = document.createElement('div');
-    profileHeader.classList.add('comment__profile__header');
-
-  
-
-    // create the h4 - user - array
-    const userName = document.createElement('h4')
-    // console.log('h4') <--works
-    userName.innerText = comment[i].user;
-    // console.log(userName); <-- works
-
-    // create the p - date - array
-    const userDate = document.createElement('p')
-    userDate.innerText = comment[i].date;
-
-
-    // create the p - enclosed in profile header - array comments
-    const userComments = document.createElement('p');
-    userComments.innerText = comment[i].comments;
-
-
-    //remember this order does matter
-    commentArticle.appendChild(commentImg); // <-- check
-    commentArticle.appendChild(commentContainer); //<--check
-    commentContainer.appendChild(profileHeader); // <--check
-    profileHeader.appendChild(userName); // <-- check
-    profileHeader.appendChild(userDate); // <--check
-    commentContainer.appendChild(userComments);
-
-  
-
-    // glue everything together <---
-    parentComment.appendChild(commentArticle);
-
-  }
+return b.timestamp - a.timestamp
 
 }
 
-commentsArray(commentList);
+function getAllComments () {
+axios.get((`${apiURL}/comments/?api_key=${apiKEY}`)).then((response) => {
+const sortedComments = response.data.sort(compareStamp);
+
+sortedComments.forEach((comments) => {
+
+const commentArticle = document.createElement('article');
+
+commentArticle.classList.add('comment__container');
+
+const commentImg = document.createElement('img');
+
+commentImg.classList.add('comment__img');
+
+commentImg.setAttribute('src', '../Assets/Images/default.png');
+
+const commentContainer = document.createElement('div')
+
+commentContainer.classList.add('comment__profile__container');
+
+
+const profileHeader = document.createElement('div');
+profileHeader.classList.add('comment__profile__header');
+
+const userName = document.createElement('h4')
+
+userName.innerText = comments.name
+
+const userDate = document.createElement('p')
+userDate.innerText = new Date(comments.timestamp ).toLocaleDateString()
+
+const userComments = document.createElement('p');
+userComments.innerText = comments.comment
+
+
+commentArticle.appendChild(commentImg); 
+commentArticle.appendChild(commentContainer); 
+commentContainer.appendChild(profileHeader); 
+profileHeader.appendChild(userName); 
+profileHeader.appendChild(userDate); 
+commentContainer.appendChild(userComments);
+
+parentComment.appendChild(commentArticle);
+
+});
+
+}).catch((error) => {
+  console.log(error);
+});
+}
 
 
 const myForm = document.getElementById('form');
+let commentSection = document.querySelector('.comment__section')
 
 myForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  let newestComment = {
-    user: e.target.name.value,
-    comments: e.target.comment__textarea.value,
-    date: new Date(Date.now()).toLocaleDateString()
-  }
-  console.log(newestComment);
-
-  let commentSection = document.querySelector('.comment__section')
-  commentSection.innerText = '';
-  commentList.unshift(newestComment);
-
-  commentsArray(commentList);
+    axios.post(`${apiURL}/comments/?api_key=${apiKEY}`, {
+      name: e.target.name.value,
+      comment: e.target.comment__textarea.value
+    }).then((response)=> {
+      console.log(response)
+      commentSection.innerHTML = '';
+      getAllComments() 
+    }).catch((error) => {
+      console.log(error);
+    });
 });
-
-
-// This is my api key
-
-// {
-// "api_key": "aa471e79-f431-4c44-b489-7f88a7efba89"
-// }
+getAllComments();
